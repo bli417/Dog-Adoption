@@ -1,0 +1,41 @@
+version: "3"
+services:
+  db:
+    image: "mysql:8.0.20"
+    command: ['--default-authentication-plugin=mysql_native_password', '--sql_mode=']
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=omscs!!
+      - MYSQL_USER=team012
+      - MYSQL_PASSWORD=cs6400
+      - MYSQL_DATABASE=MuttHouse
+    volumes:
+      - ./structure.sql:/docker-entrypoint-initdb.d/structure.sql
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+        - 8080:8080
+  server:
+    image: node:slim
+    volumes:
+      - ./server:/home/node/app
+    links:
+      - db
+    command: /bin/bash
+    working_dir: /home/node/app
+    environment: 
+      - JWT_SECRET=crazymoment
+      - TOKEN_LIFE=1d
+    ports:
+      - 3000:3000
+    tty: true
+  # client:
+  #   image: node:slim
+  #   volumes:
+  #     - ./client:/home/node/app
+  #   command: /bin/bash
+  #   working_dir: /home/node/app
+  #   ports:
+  #     - 3001:3001
+  #   tty: true

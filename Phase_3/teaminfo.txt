@@ -1,0 +1,9 @@
+Team012:
+Jiatang Dong (jdong86@gatech.edu)
+Boyan Lu (blu71@gatech.edu)
+Ben Li (bli417@gatech.edu)
+Pei Tang (ptang39@gatech.edu)
+
+SQL Location:
+Schema:  ../Phase_3/structure.sql
+API SQL: ../Phase_3/Server/sql

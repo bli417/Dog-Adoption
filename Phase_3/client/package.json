@@ -1,0 +1,40 @@
+{
+  "name": "MuttHouseClient",
+  "description": "Mo's Mutt House Web Client",
+  "author": "team012",
+  "private": true,
+  "scripts": {
+    "dev": "webpack-dev-server --host 0.0.0.0 --inline --hot",
+    "build": "cross-env NODE_ENV=production webpack --watch --progress --hide-modules"
+  },
+  "dependencies": {
+    "vows": "^0.8.1",
+    "vue": "^2.6.11",
+    "vuex": "^2.1.2",
+    "vue-resource": "1.5.1",
+    "bootstrap": "^4.5.0",
+    "bootstrap-vue": "^2.15.0",
+    "moment": "^2.27.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.17.0",
+    "url-loader": "^0.5.7",
+    "babel-loader": "^6.2.5",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "connect-livereload": "^0.5.4",
+    "cross-env": "^3.0.0",
+    "css-loader": "^3.6.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
+    "style-loader": "^0.13.1",
+    "vue-hot-reload-api": "^1.2.0",
+    "vue-loader": "^9.7.0",
+    "vue-router": "^2.1.1",
+    "vue-style-loader": "^4.1.2",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2",
+    "webpack-merge": "^0.15.0"
+  }
+}
